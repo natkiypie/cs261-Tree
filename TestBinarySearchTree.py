@@ -1,0 +1,20 @@
+
+import unittest
+
+class TestBinarySearchTree(unittest.TestCase):
+
+    """
+    Initialization
+    """
+
+    def test_instantiation(self):
+        """
+        A BinarySearchTree exists.
+        """
+        try:
+            BinarySearchTree()
+        except NameError:
+            self.fail("Could not instantiate BinarySearchTree")
+
+if __name__ == '__main__':
+    unittest.main()
