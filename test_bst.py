@@ -29,5 +29,11 @@ class TestBinarySearchTree(unittest.TestCase):
         self.assertEqual(None, bst.left)
         self.assertEqual(None, bst.right)
 
+    def test_insert_smaller_values_as_left(self):
+        bst = BinarySearchTree(10)
+        child = BinarySearchTree(5)
+        bst.insert(child)
+        self.assertEqual(child, bst.left)
+
 if __name__ == '__main__':
     unittest.main()
