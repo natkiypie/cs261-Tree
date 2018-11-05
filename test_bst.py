@@ -46,7 +46,7 @@ class TestBinarySearchTree(unittest.TestCase):
         lchild = BinarySearchTree(8)
         llchild = BinarySearchTree(6)
         bst.insert(lchild)
-        lchild.insert(llchild)
+        bst.left.insert(llchild)
         self.assertEqual(llchild, lchild.left)
 
 
