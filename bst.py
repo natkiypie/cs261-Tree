@@ -10,3 +10,5 @@ class BinarySearchTree:
     def insert(self, child):
         if child.value < self.value:
             self.left = child
+        elif child.value > self.value:
+            self.right = child
