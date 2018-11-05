@@ -41,5 +41,14 @@ class TestBinarySearchTree(unittest.TestCase):
         bst.insert(child)
         self.assertEqual(child, bst.right)
 
+    def test_insert_multiple_values(self):
+        bst = BinarySearchTree(10)
+        lchild = BinarySearchTree(8)
+        llchild = BinarySearchTree(6)
+        bst.insert(lchild)
+        bst.insert(llchild)
+        self.assertEqual(llchild, lchild.left)
+
+
 if __name__ == '__main__':
     unittest.main()

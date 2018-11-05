@@ -12,3 +12,4 @@ class BinarySearchTree:
             self.left = child
         elif child.value > self.value:
             self.right = child
+
