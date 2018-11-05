@@ -21,3 +21,7 @@ class BinarySearchTree:
             else:
                 self.right.insert(node)
 
+    def find(self, value):
+        if self.value is value:
+            return self.value
+

@@ -29,18 +29,6 @@ class TestBinarySearchTree(unittest.TestCase):
         self.assertEqual(None, bst.left)
         self.assertEqual(None, bst.right)
 
-#    def test_insert_smaller_values_as_left(self):
-#        bst = BinarySearchTree(10)
-#        child = BinarySearchTree(5)
-#        bst.insert(child)
-#        self.assertEqual(child, bst.left)
-#
-#    def test_insert_larger_values_as_right(self):
-#        bst = BinarySearchTree(5)
-#        child = BinarySearchTree(10)
-#        bst.insert(child)
-#        self.assertEqual(child, bst.right)
-
     def test_new_insert_method(self):
         value = 10
         bst = BinarySearchTree()
@@ -74,6 +62,12 @@ class TestBinarySearchTree(unittest.TestCase):
         bst.insert(val_four)
         bst.insert(val_one)
         self.assertEqual(val_one, bst.left.left.value)
+
+    def test_find(self):
+        test_val = 10
+        bst = BinarySearchTree(test_val)
+        return_val = bst.find(test_val)
+        self.assertEqual(test_val, return_val)
 
 
 
