@@ -26,4 +26,8 @@ class BinarySearchTree:
             return None
         elif self.value is value:
             return self.value
+        elif value < self.value:
+            return self.left.find(value)
+        elif value > self.value:
+            return self.right.find(value)
 
