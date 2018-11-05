@@ -84,6 +84,15 @@ class TestBinarySearchTree(unittest.TestCase):
         test_val = bst.find(sml_val)
         self.assertEqual(test_val, sml_val)
 
+    def test_find_larger_value(self):
+        val = 10
+        lrg_val = 15
+        bst = BinarySearchTree()
+        bst.insert(val)
+        bst.insert(lrg_val)
+        test_val = bst.find(lrg_val)
+        self.assertEqual(test_val, lrg_val)
+
 
 if __name__ == '__main__':
     unittest.main()
