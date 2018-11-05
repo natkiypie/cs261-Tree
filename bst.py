@@ -22,6 +22,7 @@ class BinarySearchTree:
                 self.right.insert(node)
 
     def find(self, value):
-        if self.value is value:
+        if self.value is None:
+            return None
+        elif self.value is value:
             return self.value
-
