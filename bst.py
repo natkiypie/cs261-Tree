@@ -7,9 +7,11 @@ class BinarySearchTree:
         self.left = None
         self.right = None
 
-    def insert(self, child):
-        if child.value < self.value:
-            self.left = child
-        elif child.value > self.value:
-            self.right = child
+    def insert(self, node):
+        if self.value is None:
+            self.value = node
+        elif node < self.value:
+            self.left = BinarySearchTree(node)
+        elif node > self.value:
+            self.right = BinarySearchTree(node)
 
