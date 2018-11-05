@@ -93,6 +93,17 @@ class TestBinarySearchTree(unittest.TestCase):
         test_val = bst.find(lrg_val)
         self.assertEqual(test_val, lrg_val)
 
+    def test_find_multiple_values(self):
+        val_one = 10
+        val_two = 5
+        val_three = 2
+        bst = BinarySearchTree()
+        bst.insert(val_one)
+        bst.insert(val_two)
+        bst.insert(val_three)
+        test_val = bst.find(val_three)
+        self.assertEqual(test_val, val_three)
+
 
 if __name__ == '__main__':
     unittest.main()
