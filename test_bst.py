@@ -65,8 +65,8 @@ class TestBinarySearchTree(unittest.TestCase):
 
     def test_find(self):
         test_val = 10
-        bst = BinarySearchTree(5)
-        return_val = bst.find(test_val)
+        bst = BinarySearchTree(test_val)
+        return_val = bst.find(5)
         self.assertEqual(test_val, return_val)
 
 
