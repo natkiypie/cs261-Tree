@@ -47,6 +47,22 @@ class TestBinarySearchTree(unittest.TestCase):
         bst.insert(value)
         self.assertEqual(value, bst.value)
 
+    def test_new_insert_left(self):
+        value = 10
+        new_value = 5
+        bst = BinarySearchTree()
+        bst.insert(value)
+        bst.insert(new_value)
+        self.assertEqual(new_value, bst.left.value)
+
+    def test_new_insert_left(self):
+        value = 10
+        new_value = 15
+        bst = BinarySearchTree()
+        bst.insert(value)
+        bst.insert(new_value)
+        self.assertEqual(new_value, bst.right.value)
+
 
 if __name__ == '__main__':
     unittest.main()
