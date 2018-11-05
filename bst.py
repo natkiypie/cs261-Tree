@@ -26,3 +26,4 @@ class BinarySearchTree:
             return None
         elif self.value is value:
             return self.value
+
