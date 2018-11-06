@@ -134,6 +134,5 @@ class TestBinarySearchTree(unittest.TestCase):
         test_case = bst.postorder()
         self.assertEqual(test_case, test_list)
 
-
 if __name__ == '__main__':
     unittest.main()

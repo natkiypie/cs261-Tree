@@ -56,3 +56,5 @@ class BinarySearchTree:
             io_list.extend(self.right.inorder())
         io_list.append(self.value)
         return io_list
+
+
