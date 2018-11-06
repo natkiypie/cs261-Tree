@@ -39,3 +39,11 @@ class BinarySearchTree:
             po_list.extend(self.right.preorder())
         return po_list
 
+    def inorder(self):
+        io_list = []
+        if self.left:
+            io_list.extend(self.left.inorder())
+        io_list.append(self.value)
+        if self.right:
+            io_list.extend(self.right.inorder())
+        return io_list
