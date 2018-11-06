@@ -31,3 +31,11 @@ class BinarySearchTree:
         elif value > self.value:
             return self.right.find(value)
 
+    def preorder(self):
+        po_list = [self.value]
+        if self.left:
+            po_list.extend(self.left.preorder())
+        if self.right:
+            po_list.extend(self.right.preorder())
+        return po_list
+

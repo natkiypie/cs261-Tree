@@ -104,6 +104,16 @@ class TestBinarySearchTree(unittest.TestCase):
         test_val = bst.find(val_three)
         self.assertEqual(test_val, val_three)
 
+    def test_preorder(self):
+        bst = BinarySearchTree()
+        bst.insert(3)
+        bst.insert(1)
+        bst.insert(7)
+        bst.insert(5)
+        test_list = [3, 1, 7, 5]
+        test_case = bst.preorder()
+        self.assertEqual(test_case, test_list)
+
 
 if __name__ == '__main__':
     unittest.main()
