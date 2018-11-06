@@ -47,3 +47,12 @@ class BinarySearchTree:
         if self.right:
             io_list.extend(self.right.inorder())
         return io_list
+
+    def postorder(self):
+        io_list = []
+        if self.left:
+            io_list.extend(self.left.inorder())
+        if self.right:
+            io_list.extend(self.right.inorder())
+        io_list.append(self.value)
+        return io_list
